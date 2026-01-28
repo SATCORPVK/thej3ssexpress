@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07070b" />
+  <title>The J3ss Express — Link Hub</title>
+  <meta name="description" content="Ultra-realistic train-themed link page for The J3ss Express." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/avatar.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Cinematic Background Layers -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__stars"></div>
+    <div class="bg__mist"></div>
+    <div class="bg__rails"></div>
+    <div class="bg__train">
+      <div class="train">
+        <div class="train__smoke"></div>
+        <div class="train__headlamp"></div>
+        <div class="train__body">
+          <div class="train__stripe"></div>
+          <div class="train__windows"></div>
+          <div class="train__wheel train__wheel--1"></div>
+          <div class="train__wheel train__wheel--2"></div>
+          <div class="train__wheel train__wheel--3"></div>
+        </div>
+        <div class="train__motion"></div>
+      </div>
+    </div>
+    <canvas id="sparks" class="bg__sparks"></canvas>
+    <canvas id="embers" class="bg__embers"></canvas>
+    <div class="bg__vignette"></div>
+  </div>
+
+  <!-- Top HUD -->
+  <header class="top">
+    <div class="top__chip">
+      <span class="dot"></span>
+      <span class="mono">LIVE HUB</span>
+      <span class="sep"></span>
+      <span class="mono" id="localTime">--:--</span>
+    </div>
+
+    <button class="top__audio" id="audioToggle" type="button" aria-pressed="false" aria-label="Toggle ambience">
+      <span class="top__audioIcon" aria-hidden="true">⏺</span>
+      <span class="mono">AMB</span>
+    </button>
+  </header>
+
+  <!-- Main Card -->
+  <main class="wrap">
+    <section class="card" aria-label="The J3ss Express link hub">
+      <div class="card__header">
+        <div class="avatar" aria-hidden="true">
+          <!-- Replace src with client image -->
+          <img src="assets/avatar.png" alt="" />
+          <span class="avatar__ring"></span>
+          <span class="avatar__pulse"></span>
+        </div>
+
+        <div class="identity">
+          <h1 class="title">TheJ3ssExpress</h1>
+          <p class="handle mono">@thej3ssexpress</p>
+
+          <div class="badges">
+            <span class="badge">🚂 Train Vibes</span>
+            <span class="badge">🎮 Gamer</span>
+            <span class="badge">🌙 Dreamer</span>
+            <span class="badge">👑 Building an Empire</span>
+          </div>
+        </div>
+
+        <div class="signal" aria-hidden="true">
+          <div class="signal__bar"></div>
+          <div class="signal__bar"></div>
+          <div class="signal__bar"></div>
+          <div class="signal__bar"></div>
+        </div>
+      </div>
+
+      <!-- Hero / CTA -->
+      <div class="hero">
+        <div class="hero__left">
+          <p class="hero__kicker mono">PULSE • FEATURED CREATOR</p>
+          <p class="hero__line">
+            <span class="glow">FOLLOW • WATCH • VIBE</span>
+          </p>
+          <p class="hero__sub">
+            Tap a platform below. Everything runs like a smooth midnight express.
+          </p>
+        </div>
+
+        <div class="hero__right">
+          <div class="meter" aria-hidden="true">
+            <div class="meter__label mono">ENGINE</div>
+            <div class="meter__bar"><span class="meter__fill" style="--p: 86%"></span></div>
+            <div class="meter__hint mono">STEAM PRESSURE STABLE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <nav class="links" aria-label="Social links">
+        <!-- Replace href targets with real URLs -->
+        <a class="link link--primary" href="https://linktr.ee/TheJ3ssExpress" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">🚂</span>
+          <span class="link__text">
+            <span class="link__title">Main Link Hub</span>
+            <span class="link__desc mono">linktr.ee/TheJ3ssExpress</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">💬</span>
+          <span class="link__text">
+            <span class="link__title">Discord</span>
+            <span class="link__desc mono">Join the station</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">🟣</span>
+          <span class="link__text">
+            <span class="link__title">Twitch</span>
+            <span class="link__desc mono">Live streams</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">🎵</span>
+          <span class="link__text">
+            <span class="link__title">TikTok</span>
+            <span class="link__desc mono">Clips & vibes</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">🟩</span>
+          <span class="link__text">
+            <span class="link__title">Kick</span>
+            <span class="link__desc mono">Alt live channel</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">▶</span>
+          <span class="link__text">
+            <span class="link__title">YouTube</span>
+            <span class="link__desc mono">Uploads & VODs</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <span class="link__icon" aria-hidden="true">🛍</span>
+          <span class="link__text">
+            <span class="link__title">Merch</span>
+            <span class="link__desc mono">Support the ride</span>
+          </span>
+          <span class="link__chev" aria-hidden="true">›</span>
+        </a>
+      </nav>
+
+      <!-- Optional: Email / business -->
+      <section class="contact">
+        <div class="contact__left">
+          <h2 class="contact__title">Booking / Collabs</h2>
+          <p class="contact__text">Want a feature, sponsor spot, or collab? Drop a message.</p>
+        </div>
+
+        <form class="contact__form" id="contactForm">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" class="field" type="text" placeholder="Your name" autocomplete="name" />
+
+          <label class="sr-only" for="message">Message</label>
+          <input id="message" name="message" class="field" type="text" placeholder="What are we building?" />
+
+          <button class="btn" type="submit">
+            <span class="btn__shine" aria-hidden="true"></span>
+            Send
+          </button>
+
+          <p class="contact__note mono" id="formNote">
+            This form is front-end only. Hook to email/Discord webhook later.
+          </p>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__left mono">
+          <span id="year">2026</span> • The J3ss Express • All aboard
+        </div>
+        <div class="footer__right mono">
+          <a href="#" class="footer__link" id="shareBtn">Share</a>
+          <span class="sep">•</span>
+          <a href="#" class="footer__link" id="copyBtn">Copy Links</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Ambient audio (optional) -->
+  <audio id="ambience" preload="auto" loop>
+    <!-- Put your audio file in assets/ambience.mp3 (or change path) -->
+    <source src="assets/ambience.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
